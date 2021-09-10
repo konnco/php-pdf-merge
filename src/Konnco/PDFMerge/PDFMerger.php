@@ -1,4 +1,4 @@
-<?php namespace Jurosh\PDFMerge;
+<?php namespace Konnco\PDFMerge;
 
 use Exception;
 use setasign\Fpdi\Fpdi AS FPDI;
@@ -72,6 +72,11 @@ class PDFMerger {
                     $template = $fpdi->importPage($i);
                     $size = $fpdi->getTemplateSize($template);
 
+                    $orientation = $file->getOrientationCode();
+                    if ($orientation == 'A') {
+                        $orientation = $size['width'] > $size['height'] ? 'L' : 'P';
+                    }
+
                     $fpdi->AddPage($file->getOrientationCode(), array($size['width'], $size['height']));
                     $fpdi->useTemplate($template);
                 }
@@ -81,6 +86,11 @@ class PDFMerger {
                         throw new Exception("Could not load page '$page' in PDF '$filename'. Check that the page exists.");
                     }
                     $size = $fpdi->getTemplateSize($template);
+
+                    $orientation = $file->getOrientationCode();
+                    if ($orientation == 'A') {
+                        $orientation = $size['width'] > $size['height'] ? 'L' : 'P';
+                    }
 
                     $fpdi->AddPage($file->getOrientationCode(), array($size['w'], $size['h']));
                     $fpdi->useTemplate($template);

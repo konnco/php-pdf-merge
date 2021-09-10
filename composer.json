@@ -1,12 +1,12 @@
 {
-  "name": "jurosh/pdf-merge",
+  "name": "konnco/pdf-merge",
   "description": "PHP PDF Merger",
-  "version": "2.1.0",
+  "version": "1.0.0",
   "keywords": [
     "pdf",
     "merge"
   ],
-  "homepage": "https://github.com/jurosh/php-pdf-merge",
+  "homepage": "https://github.com/konnco/php-pdf-merge",
   "license": "MIT",
   "require": {
     "php": ">=5.6.20",
@@ -15,15 +15,15 @@
   },
   "authors": [
     {
-      "name": "Juraj Husar",
-      "email": "jurosh@jurosh.com",
-      "homepage": "http://jurosh.com"
+      "name": "Konnco",
+      "email": "hello@konnco.com",
+      "homepage": "http://konnco.com"
     }
   ],
   "autoload": {
     "classmap": [
-      "src/Jurosh/PDFMerge/PDFMerger.php",
-      "src/Jurosh/PDFMerge/PDFObject.php"
+      "src/Konnco/PDFMerge/PDFMerger.php",
+      "src/Konnco/PDFMerge/PDFObject.php"
     ]
   }
 }

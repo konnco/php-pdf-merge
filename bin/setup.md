@@ -5,7 +5,7 @@
 
 docker run -it --rm --name pdfmerge \
  -v "$PWD":/usr/src/myapp \
- -w /usr/src/myapp jurosh/php \
+ -w /usr/src/myapp konnco/php \
  php ./bin/composer-setup.php \
  --install-dir=bin --filename=composer
 
@@ -13,13 +13,13 @@ docker run -it --rm --name pdfmerge \
 
 docker run -it --rm --name pdfmerge \
  -v "$PWD":/usr/src/myapp \
- -w /usr/src/myapp jurosh/php \
+ -w /usr/src/myapp konnco/php \
  php bin/composer install
 
 # Run example
 
 docker run -it --rm --name pdfmerge \
  -v "$PWD":/usr/myapp \
- -w /usr/myapp/example jurosh/php \
+ -w /usr/myapp/example konnco/php \
  php example.php
 ```

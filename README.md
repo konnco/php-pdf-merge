@@ -2,21 +2,23 @@
 
 PDF Merge library for PHP.
 
+_Forked from https://github.com/jurosh/php-pdf-merge_
+
 Install with composer:
 
-`composer require jurosh/pdf-merge`
+`composer require konnco/pdf-merge`
 
 Should add dependency:
 
 ```json
-"jurosh/pdf-merge": "^2.0"
+"konnco/pdf-merge": "^1.0"
 ```
 
 ## Highlights
 
-Pdf merging with modes portrait/landscape.
+Pdf merging with modes portrait/landscape or automatic mode.
 
-Tested in Laravel4 & Laravel5 framework (but still can be used without any framework as standalone utility).
+Tested in Laravel 7 & Laravel 8 framework.
 
 ## Usage
 
@@ -24,10 +26,11 @@ Tested in Laravel4 & Laravel5 framework (but still can be used without any frame
 // Autoload composer classses...
 
 // and now we can use library
-$pdf = new \Jurosh\PDFMerge\PDFMerger;
+$pdf = new \Konnco\PDFMerge\PDFMerger;
 
 // add as many pdfs as you want
 $pdf->addPDF('path/to/source/file.pdf', 'all', 'vertical')
+  ->addPDF('path/to/source/file1.pdf', 'all', 'automatic')
   ->addPDF('path/to/source/file1.pdf', 'all')
   ->addPDF('path/to/source/file2.pdf', 'all', 'horizontal');
 
