@@ -11,7 +11,7 @@ Install with composer:
 Should add dependency:
 
 ```json
-"konnco/pdf-merge": "^1.0"
+"konnco/pdf-merge": "^2.0"
 ```
 
 ## Highlights

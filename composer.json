@@ -1,7 +1,7 @@
 {
   "name": "konnco/pdf-merge",
   "description": "PHP PDF Merger",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "keywords": [
     "pdf",
     "merge"
