@@ -77,7 +77,7 @@ class PDFMerger {
                         $orientation = $size['width'] > $size['height'] ? 'L' : 'P';
                     }
 
-                    $fpdi->AddPage($file->getOrientationCode(), array($size['width'], $size['height']));
+                    $fpdi->AddPage($orientation, array($size['width'], $size['height']));
                     $fpdi->useTemplate($template);
                 }
             } else {
@@ -92,7 +92,7 @@ class PDFMerger {
                         $orientation = $size['width'] > $size['height'] ? 'L' : 'P';
                     }
 
-                    $fpdi->AddPage($file->getOrientationCode(), array($size['w'], $size['h']));
+                    $fpdi->AddPage($orientation, array($size['w'], $size['h']));
                     $fpdi->useTemplate($template);
                 }
             }
